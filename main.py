@@ -88,6 +88,7 @@ while is_on:
         print(f"Money: ${profit}")
     else:
         drink = MENU[choice]
+        print(f"Your {choice} costs {drink["cost"]}")
         if is_enough_resources(drink["ingredients"]):
             payment = process_coins()
             if is_transaction_successful(payment, drink["cost"]):
